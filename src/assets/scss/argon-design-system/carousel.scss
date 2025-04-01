@@ -1,0 +1,146 @@
+// Bootstrap carousel
+img{
+    max-width: 100%;
+}
+.carousel-control-next,.carousel-control-prev {
+top: 45% !important;
+right: 1% !important;
+height: 50px !important;
+width: 50px !important;
+font-size: 30px;
+border-radius: 100%;
+background-color: #888;
+}
+.carousel-control-prev{
+    left: 1%;
+}
+.carousel-indicators li{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    // border: 2px solid #82888d;
+    background: rgb(102, 102, 102);    
+}
+.carousel-indicators .active{
+    width: 15px !important;
+    height: 15px !important;
+    padding: 0 !important;
+    border-color: #ffb606;
+    background-color: #ffb606;
+}
+.carousel-caption{
+    bottom: 30% !important;
+    h1,h2,h3,h4,h5,h6{
+        color: white;
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 1.1;
+        text-shadow: 0px 8px 6px #000;
+    }
+    p{
+        font-size: 30px;
+        font-weight: 600; 
+        text-shadow: 0px 8px 6px #000;
+    }
+}
+.section-hero{
+    p{
+        font-size: 45px;
+        line-height: 1.1;
+        font-family: cambria;
+    }
+}
+.slick-slider {
+    .slick-prev::before, 
+    .slick-next::before{
+        font-size: 40px;
+    }
+    .slick-prev{
+        left: 2%;
+        z-index: 1;
+        top: 50%;
+    }
+    .slick-next{
+        right: 3%;
+        z-index: 1;
+        top: 50%;
+    }
+    .slick-prev::before, .slick-next::before{
+        color: rgba(240, 240, 240, 0.8) !important;
+    }
+}
+.upevent{
+    .slick-prev::before, .slick-next::before{
+        display: none;
+    }
+    &:hover{
+        .slick-prev::before, .slick-next::before{
+            display: block;
+            color: rgba(0, 0, 0, 0.8) !important;
+        }
+    }
+}
+.carousel-inner{
+    img{
+        height: 645px;
+    }
+}
+
+.seminar{
+	padding-bottom: 20px;
+	text-align: center;
+    background-color: #ffffff;
+	border: 1px solid #f4f4f4;
+    border-bottom: 2px solid #b71c1c;
+	.profileimg{
+		padding: 40px 0;
+		background-color: #dbdbdb;
+		img{
+			width: 150px;
+			height: 150px;
+			overflow: hidden;
+			border-radius: 50%;
+			display: inline-block !important;
+			border: 3px solid #b71c1c;
+		}
+	}
+}
+
+.latestMain{
+    .slick-slide{
+        padding-right: 10px;
+    }
+    .latest{
+        padding-bottom: 25px;
+        text-align: left;
+        background-color: #ffffff;
+        border: 1px solid #f4f4f4;
+        border-bottom: 2px solid #b71c1c;
+        .profileimg{
+            text-align: center;
+            img{
+                display: inline-block !important;
+            }
+        }
+    }
+    .slick-slider .slick-next{
+        right: 29px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .slick-slide{
+        img{
+            height: 400px;
+        }
+    } 
+    .carousel-caption{
+        bottom: 15% !important;
+        h3{
+            font-size: 30px !important;
+        }
+        p{
+            font-size: 30px !important;
+        }
+    }
+}

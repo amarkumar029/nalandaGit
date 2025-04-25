@@ -119,7 +119,15 @@ const DemoNavbar = () => {
                     {item[0]?.address}
                   </div>
                   <div>
-                    <i className="fa fa-street-view mr-2 fs-5" /> 
+                  <a
+                    className="ml-1"
+                    style={{ color: "white" }}
+                    href="https://maps.app.goo.gl/C21R6jEsb8g3V1R29"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                      <i className="fa fa-street-view mr-2 fs-5" /> 
+                    </a>
                   </div>
                 </div>
               </Col>
@@ -166,7 +174,7 @@ const DemoNavbar = () => {
                     className="nav-link"
                     to="/"
                   >
-                    Home
+                    <i className="fa fa-home mr-1" /> Home
                   </Link>
                 </NavItem>
                 <NavItem>
@@ -174,7 +182,7 @@ const DemoNavbar = () => {
                     className="nav-link"
                     to="/about-us"
                   >
-                    About Us
+                    <i className="fa fa-university mr-1" /> About Us
                   </Link>
                 </NavItem>
                 <NavItem>
@@ -182,7 +190,15 @@ const DemoNavbar = () => {
                     className="nav-link"
                     to="/schools"
                   >
-                    Schools
+                    <i className="fa fa-graduation-cap mr-1" /> Schools
+                  </Link>
+                </NavItem>
+                <NavItem>
+                  <Link
+                    className="nav-link"
+                    to="/student-services"
+                  >
+                    <i className="fa fa-users mr-1" /> Student Services
                   </Link>
                 </NavItem>
                 <NavItem>
@@ -190,7 +206,7 @@ const DemoNavbar = () => {
                     className="nav-link"
                     to="/admission"
                   >
-                    Admission
+                    <i className="fa fa-address-card mr-1" /> Admission
                   </Link>
                 </NavItem>
                 <NavItem>
@@ -198,15 +214,15 @@ const DemoNavbar = () => {
                     className="nav-link"
                     to="/examination"
                   >
-                    Examination
+                    <i className="fa fa-address-card mr-1" /> Examination
                   </Link>
                 </NavItem>
                 <NavItem>
                   <Link
                     className="nav-link"
-                    to="/gallery"
+                    to="/media"
                   >
-                    Gallery
+                    <i className="fa fa-image mr-1" /> Media
                   </Link>
                 </NavItem>
                 <NavItem>
@@ -214,7 +230,7 @@ const DemoNavbar = () => {
                     className="nav-link"
                     to="/contact-us"
                   >
-                    Contact Us
+                    <i className="fa fa-address-card mr-1" /> Contact Us
                   </Link>
                 </NavItem>
                 {/* <NavItem>

@@ -74,14 +74,16 @@ function NoticeAll () {
                     <div className="ntitle">
                       {user.pdf ? (                      
                         // <a href={process.env.PUBLIC_URL + `../uploads/${user.pdf}`} className="link" target='_blank' rel="noreferrer">
-                        <a href={`${user.pdf}`} className="link" target='_blank' rel="noreferrer">
+                        <a href={`${user.pdf}`} target='_blank' rel="noreferrer">
                           {user.title} 
                           {user.status === 'new' ? (
                             <img src={noticenew} alt="new" height="20" /> 
                           ):null}
                         </a>                        
+                      ) : user.url && user.url.trim() !== "" ? (
+                        <a href={user.url} className="link" target="_blank" rel="noreferrer">View</a>
                       ) : (
-                        <Link className="link" to={`/noticeDetails/${user.id}`}>
+                        <Link to={`/noticeDetails/${user.id}`}>
                           {user.title} 
                           {user.status === 'new' ? (
                             <img src={noticenew} alt="new" height="20" /> 

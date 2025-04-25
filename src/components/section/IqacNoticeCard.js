@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import baseUrl from "../../navigation/base";
 import loadings from "../../assets/img/loader.gif";
-import AlbumIcon from '@mui/icons-material/Album';
+import { Col, Row } from "reactstrap";
+// import AlbumIcon from '@mui/icons-material/Album';
 
 export default function IqacNoticeCard(props) {
     const [items, setItems] = useState([]);
@@ -23,24 +24,47 @@ export default function IqacNoticeCard(props) {
     function getItemsNotice(url) {
         setLoading(true);
         axios.get(url)
-        .then(function (response) {
+        .then(async function (response) {
+            const data = response.data;
+            const uniqueTitles = getUniqueTitles(data);
+
+            // Map stype to image from another API
+            const itemsWithImages = await Promise.all(
+                uniqueTitles.map(async (item) => {
+                    try {
+                        const imageRes = await axios.get(`${baseUrl}/schoolimg?title=${item.stype}`);
+                        // console.log("Image response:", imageRes.data);
+            
+                        return {
+                            ...item,
+                            image: Array.isArray(imageRes.data) && imageRes.data.length > 0 && imageRes.data[0].banner_img
+                                ? `./uploads/${imageRes.data[0].banner_img}`
+                                : "./uploads/default.jpg"
+                        };
+                    } catch (e) {
+                        return {
+                            ...item,
+                            image: "./uploads/default.jpg"
+                        };
+                    }
+                })
+            );                                  
+
+            setItems(itemsWithImages);
             setLoading(false);
-            const uniqueTitles = getUniqueTitles(response.data);
-            setItems(uniqueTitles);
-            // console.log("notice data", uniqueTitles);
         })
         .catch(function (error) {
             setLoading(false);
-            // console.error("Error fetching data:", error);
         });
     }
-
+    
     // Helper function to filter unique titles
     function getUniqueTitles(data) {
         const titlesSet = new Set();
         return data.filter(item => {
             if (!titlesSet.has(item.stype)) { // Check if title is unique
                 titlesSet.add(item.stype);
+                // console.log("Titles", titlesSet);
                 return true; // Include this item
             }
             return false; // Skip duplicates
@@ -56,14 +80,27 @@ export default function IqacNoticeCard(props) {
     }
 
     return (
-        <>
-            {Array.isArray(items) && items.map((user, key) => (
-                <div key={key} className="notice-item">
-                    <Link className="link mb-2 mt-0" to={`/all/${sentFrom}/${user.stype}`}>
-                        <AlbumIcon sx={{ fontSize: 15, verticalAlign: 'sub' }} /> {user.stype}
-                    </Link>
-                </div>
-            ))}
+        <>        
+            <Row>
+                {Array.isArray(items) && items.map((user, key) => (
+                    <Col lg="3" className="p-1" key={key}>
+                        <div className="notice-item">
+                            <div className="abourCard">
+                                <Link to={`/all/${sentFrom}/${user.stype}`}>
+                                    <article>
+                                        <div className="post-img">
+                                            <img src={user.image} className="img-fluid" title={user.stype} />
+                                        </div>
+                                        <div className="col">
+                                            <p className="title2">{user.stype}</p>
+                                        </div>
+                                    </article>
+                                </Link>
+                            </div>
+                        </div>   
+                    </Col> 
+                ))}            
+            </Row>
         </>
     );
 }

@@ -6,7 +6,6 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 import noticenew from '../../assets/img/new.gif';
 
 export default function Announcement () {
-
     const [item, setItem] = useState([]);
     useEffect(() => {
         getItem();
@@ -14,7 +13,7 @@ export default function Announcement () {
 
     function getItem() {
         axios.get(`${baseUrl}/announcement`).then(function(response) {
-        setItem(response.data);
+            setItem(response.data);
         });
     }
     
@@ -42,7 +41,7 @@ export default function Announcement () {
                     pauseOnHover={true}
                 >
                     {Array.isArray(item) && item.map((user, key) =>
-                       <a href={user.url} target='_blank' rel="noreferrer"><img src={noticenew} alt="new" height="20" /> {user.title} | </a>
+                       <a href={user.url} target='_blank' rel="noreferrer"><img src={noticenew} alt="new" height="20" /> {user.title}</a>
                     )}
                 </Marquee>          
             </div>

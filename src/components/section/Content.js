@@ -33,6 +33,9 @@ export default function Content (props) {
     if(props.sentFrom==="resultContact"){
     getItemsNotice(`${baseUrl}/cms?type=Contact`);
     }
+    if(props.sentFrom==="resultAcademicCalender"){
+      getItemsNotice(`${baseUrl}/cms?type=Academic Calender`);
+    }
   },[props]);
 
   function getItemsNotice(url) {

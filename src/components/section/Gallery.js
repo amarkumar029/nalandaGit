@@ -5,7 +5,6 @@ import ReactstrapImageGallery from "./ReactstrapImageGallery";
 
 // const URL = "https://jsonplaceholder.typicode.com/photos";
 
-
 class Gallery extends Component {
   constructor() {
     super();

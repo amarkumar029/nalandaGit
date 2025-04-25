@@ -6,10 +6,14 @@ import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
 import Index from "views/Index";
 import ShowTheContent from "views/page/ShowTheContent";
+import StudentServices from "views/page/StudentServices";
+import Media from "views/page/Media";
 import Gallery from "views/page/Gallery";
 import NoticeDetails from "components/section/NoticeDetails";
 import NoticeDetailsAll from "components/section/NoticeDetailsAll";
 import NoticeAll from "views/page/NoticeAll";
+import NoticeAll2 from "views/page/NoticeAll2";
+import Rti from "views/page/Rti";
 
 import Schools from "views/page/Schools";
 import SchoolsAll from "views/page/SchoolsAll";
@@ -59,6 +63,11 @@ root.render(
         element={<ShowTheContent page="resultHyperlink" banner="resultHyperlink" />}
       />
       <Route
+        path="/academic-calender"
+        exact
+        element={<ShowTheContent page="resultAcademicCalender" banner="resultAcademicCalender" />}
+      />
+      <Route
         path="/noticeall/:id"
         exact
         element={<NoticeAll />}
@@ -74,9 +83,34 @@ root.render(
         element={<NoticeDetailsAll />}
       />
       <Route
-        path="/gallery"
+        path="/noticenewall/:type/:stype"
         exact
-        element={<Gallery page="resultGallery" banner="resultGallery" />}
+        element={<NoticeAll2 />}
+      />
+       <Route
+        path="/iqacalldetails/:type/:stype"
+        exact
+        element={<SchoolsAllDetails />}
+      />
+      <Route
+        path="/Media"
+        exact
+        element={<Media banner="resultMedia" />}
+      />
+      <Route
+        path="/photo-gallery"
+        exact
+        element={<Gallery page="resultPhotoGallery" banner="resultPhotoGallery" />}
+      />
+      <Route
+        path="/news-gallery"
+        exact
+        element={<Gallery page="resultNewsGallery" banner="resultNewsGallery" />}
+      />
+      <Route
+        path="/news-letter"
+        exact
+        element={<Gallery page="resultNewsLetter" banner="resultNewsLetter" />}
       />
       <Route path="/schools" element={<Schools />} />
       <Route
@@ -94,6 +128,16 @@ root.render(
         path="/all/:type/:stype"
         exact
         element={<DownloadsAll />}
+      />
+      <Route
+        path="/student-services"
+        exact
+        element={<StudentServices banner="resultStudentServices" />}
+      />
+      <Route
+        path="/rit"
+        exact
+        element={<Rti page="resultRti" />}
       />
     </Routes>
   </BrowserRouter>

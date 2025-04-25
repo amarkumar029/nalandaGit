@@ -42,6 +42,24 @@ export default function PageBanner (props) {
     if(props.sentFrom==="resultIqac"){
       getItemsBanner(`${baseUrl}/banner?type=Iqac`);
     }
+    if(props.sentFrom==="resultStudentServices"){
+      getItemsBanner(`${baseUrl}/banner?type=Student Services`);
+    }
+    if(props.sentFrom==="resultAcademicCalender"){
+      getItemsBanner(`${baseUrl}/banner?type=Academic Calender`);
+    }
+    if(props.sentFrom==="resultMedia"){
+      getItemsBanner(`${baseUrl}/banner?type=Media`);
+    }
+    if(props.sentFrom==="resultPhotoGallery"){
+      getItemsBanner(`${baseUrl}/banner?type=Photo Gallery`);
+    }
+    if(props.sentFrom==="resultNewsGallery"){
+      getItemsBanner(`${baseUrl}/banner?type=News Gallery`);
+    }
+    if(props.sentFrom==="resultNewsLetter"){
+      getItemsBanner(`${baseUrl}/banner?type=News Letter`);
+    }
   },[props]);
 
   function getItemsBanner(url) {

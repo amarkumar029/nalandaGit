@@ -62,6 +62,8 @@ function CardsFooter() {
                     <li><Link to="/admission">Admission</Link></li>
                     <li><Link to="/examination">Examination</Link></li>
                     <li><Link to="/contact-us">Contact Us</Link></li>
+                    <li><Link to="/hiperlink-policy">Hyperlink Policy</Link></li>
+                    <li><Link to="/downloads">Downloads</Link></li>
                   </ul>
                 </Col>
                 <Col lg="3">
@@ -69,11 +71,14 @@ function CardsFooter() {
                     &nbsp;
                   </h5>
                   <ul className="footermenu">
-                  <li><Link to="/hiperlink-policy">Hyperlink Policy</Link></li>
-                    <li><Link to="/downloads">Downloads</Link></li>
                     <li><Link to="/gallery">Gallery</Link></li>
                     <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                     <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
+                    <li><Link to="/rit">RTI</Link></li>
+                    <li><Link to="/uploads/Nalanda Open University Act.pdf" target="blank">NOU ACT</Link></li>
+                    <li><Link to="https://swayam.gov.in/" target="blank">Swayam Portal</Link></li>
+                    <li><Link to="https://nalandaopenuniversity.almaconnect.com/" target="blank">Alumni</Link></li>
+                    <li><Link to="http://www.sakshat.ac.in/" target="blank">NME-ICT Project</Link></li>
                   </ul>
                 </Col>
               </Row>
@@ -183,7 +188,7 @@ function CardsFooter() {
             <Row className="align-items-center justify-content-start">
               <Col md="6">
                 <div className="copyright">
-                  Copyright © 2023 <a href="/" rel="noreferrer">{items[0]?.companyname}</a>
+                  Copyright © <a href="/" rel="noreferrer">{items[0]?.companyname}</a>
                 </div>
               </Col>
               <Col md="6">

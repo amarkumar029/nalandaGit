@@ -12,6 +12,9 @@ import Chancellor from "components/section/Chancellor";
 import { Grid } from '@mui/material';
 import { gridSpacing } from '../store/constant';
 import Notice from "components/section/Notice";
+import SocialMedia from "components/section/SocialMedia";
+// import SchoolHomeCard from "components/section/SchoolHomeCard";
+import Announcement from "components/section/Announcement";
 // import baseUrl from "../navigation/base";
 // import axios from "axios";
 // import loadings from "../assets/img/loader.gif";
@@ -68,6 +71,7 @@ export default function Index() {
         </Helmet>
         {/* Hero Section */}
         <Hero />
+        <Announcement />
 
         {/* Principal Message Section */}
         {/* <section className="section mt-5">
@@ -95,7 +99,7 @@ export default function Index() {
             <Row>
               <Col lg="12">
                 <h4 className="heading mb-1">
-                  ABOUT <span>Nalanda Open University</span>
+                  <span>About Nalanda Open University</span>
                 </h4>
                 <div className="title-border"></div>
                 <HomeContent sentFrom="resultAbout" />
@@ -110,6 +114,17 @@ export default function Index() {
             <Chancellor />
           </Container>
         </section>
+
+        {/* Schools Slider Section */}
+        {/* <section className="section pt-5">
+          <Container fluid>
+            <div className="text-center academic">
+              <h4 className="heading mb-1"><span>Schools of Studies</span></h4>
+              <div className="title-border"></div>
+            </div>
+            <SchoolHomeCard sentFrom="resultSchools" />
+          </Container>
+        </section> */}
 
         {/* notice Section */}
         <section className="section pt-5">
@@ -144,6 +159,16 @@ export default function Index() {
                 <Notice sentFrom="resultTenders" />
               </Grid>
             </Grid>
+          </Container>
+        </section>
+
+        <section className="section  bg-light-gray pt-5">
+          <Container>
+            <div className="text-center academic">
+              <h4 className="heading mb-1"><span>NOU@Social</span> Media</h4>
+              <div className="title-border"></div>
+            </div>
+            <SocialMedia />
           </Container>
         </section>
       </main>

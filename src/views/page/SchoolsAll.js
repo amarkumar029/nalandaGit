@@ -14,7 +14,7 @@ import { Helmet } from 'react-helmet';
 function IqacAll () {
 
   const { type,stype } = useParams();
-  console.log("id is ", type,"stype is ",stype);
+  // console.log("id is ", type,"stype is ",stype);
 
   const [items, setitems] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,7 +28,7 @@ function IqacAll () {
     axios.get(url).then(function(response) {
       setLoading(false);
       setitems(response.data);
-      console.log("notice data", response.data);
+      // console.log("notice data", response.data);
     });
   }
   

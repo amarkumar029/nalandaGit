@@ -9,7 +9,8 @@
 
 .navbar-nav {
     .nav-link {
-        font-size: $font-size-lg;
+        // font-size: $font-size-lg;
+        font-size: $font-size-sm;
         // text-shadow: rgba(0,0,0,.8) 0 1px 8px;
         font-family: $navbar-nav-link-font-family;
         font-weight: $navbar-nav-link-font-weight;
@@ -264,7 +265,7 @@
                 // padding-left: 0;
                 @include hover-focus {
                     color: #fff;
-                    background-color: #1b2035;
+                    background-color: darkred;
                 }
                 &.disabled {
                     color: $navbar-dark-disabled-color;
@@ -351,7 +352,7 @@
         display: block;
     }
     .navbar-transparent {
-        background-color: #34375a !important;
+        background-color: darkred !important;
         .navbar-nav {
             .dropdown{
                 .nav-link {               

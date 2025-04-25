@@ -8,12 +8,12 @@
 	@extend .position-fixed;
     // transform: translateY(0%);
     transform: translateY(-208%);
-    background-color: #0091f9 !important;
+    background-color: darkred !important;
 }
 .headroom--unpinned {
 	@extend .position-fixed;
     transform: translateY(-208%);
-    background-color: #0091f9 !important;
+    background-color: darkred !important;
 }
 .headroom--top{
     transform: translateY(0%);
@@ -22,8 +22,8 @@
 
 .headroom--not-top {
     width: 100%;
-	padding-top: .6rem;
-	padding-bottom: .3rem;
+	// padding-top: .6rem;
+	padding-bottom: .6rem;
     box-shadow: 0 1px 10px rgba(130, 130, 134, 0.1);
 }
 .header-global{
@@ -36,7 +36,7 @@
     box-shadow: none;
 }
 .topbar{
-    background-color: #1b2035;
+    background-color: darkred;
 }
 // .logoarea{
 //     position: absolute;

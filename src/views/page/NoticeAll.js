@@ -81,7 +81,7 @@ function NoticeAll () {
                           ):null}
                         </a>                        
                       ) : user.url && user.url.trim() !== "" ? (
-                        <a href={user.url} className="link" target="_blank" rel="noreferrer">View</a>
+                        <a href={user.url} className="link" target="_blank" rel="noreferrer">{user.title}</a>
                       ) : (
                         <Link to={`/noticeDetails/${user.id}`}>
                           {user.title} 

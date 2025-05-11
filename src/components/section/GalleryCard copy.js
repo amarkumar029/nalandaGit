@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import React, { useEffect, useState, useCallback } from "react";
-import { 
-  Grid, 
-  // Card, CardContent
-} from '@mui/material';
+import { Grid } from '@mui/material';
 import { gridSpacing } from '../../store/constant';
 import baseUrl from "../../navigation/base";
 import axios from "axios";
@@ -85,50 +82,6 @@ export default function DeanCard(props) {
               <Link className="link" to={`/galleryDetails/${user.id}`}>
                 {user.title}
               </Link>
-              // <Card>
-              //   <CardContent>
-              //     <Link to={`/galleryDetailsAll/${user.id}`} style={{ display: 'block', maxWidth: '500px' }}>
-              //       <div style={{ marginBottom: '8px', fontWeight: 'bold', height: 45 }}>{user.title}</div>
-              //       <div style={{ display: 'grid', gap: '4px', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(2, 150px)', gridAutoFlow: 'dense' }}>
-              //         {user.image?.split(',').slice(0, -1).slice(0, 5).map((img, index) => {
-              //           const isOverlay = index === 4 && user.image.split(',').length > 5;
-              //           const imageStyle = {
-              //             width: '100%',
-              //             height: '100%',
-              //             objectFit: 'cover',
-              //             gridColumn: index < 2 ? 'span 1' : 'span 1',
-              //             gridRow: index < 2 ? '1' : '2',
-              //             position: 'relative',
-              //           };
-
-              //           return (
-              //             <div key={index} style={{ position: 'relative' }}>
-              //               <img src={img.trim()} alt={`Gallery ${user.title}`} style={imageStyle} />
-              //               {isOverlay && (
-              //                 <div style={{
-              //                   position: 'absolute',
-              //                   top: 0,
-              //                   left: 0,
-              //                   right: 0,
-              //                   bottom: 0,
-              //                   backgroundColor: 'rgba(0,0,0,0.6)',
-              //                   color: 'white',
-              //                   display: 'flex',
-              //                   alignItems: 'center',
-              //                   justifyContent: 'center',
-              //                   fontSize: '24px',
-              //                   fontWeight: 'bold'
-              //                 }}>
-              //                   +{user.image.split(',').length - 5}
-              //                 </div>
-              //               )}
-              //             </div>
-              //           );
-              //         })}
-              //       </div>
-              //     </Link>
-              //   </CardContent>
-              // </Card>
             )}
           </Grid>
         ))}

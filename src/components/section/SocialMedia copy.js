@@ -5,12 +5,14 @@ import { gridSpacing } from '../../store/constant';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+// import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Iframe from 'react-iframe'
 
-import axios from 'axios';
-import baseUrl from '../../navigation/base';
-import loadings from '../../assets/img/loader.gif';
-import CuratorFeed from './TwitterProfile';
+import axios from "axios"
+import baseUrl from "../../navigation/base";
+import loadings from "../../assets/img/loader.gif";
+import CuratorFeed from "./TwitterProfile";
+// import YouTubeVideos from "./YouTubeVideos";
 
 
 export default function SocialMedia () {
@@ -67,6 +69,24 @@ export default function SocialMedia () {
                     <CardContent className="px-1">
                         <section className="twitterContainer">
                             <div className="twitter-embed">
+                                {/* <TwitterTimelineEmbed
+                                sourceType="profile"
+                                // screenName="magadhuniversi1"
+                                screenName={items[0]?.twitter}
+                                options={{
+                                    tweetLimit: "10",
+                                    width: "100%",
+                                    height: "500"
+                                }}
+                                // theme="dark"
+                                noHeader="true"
+                                noBorders="true"
+                                noFooter="true"
+                                ></TwitterTimelineEmbed> */}
+                                {/* <UserFeed
+                                    username="AmarKum00271370"
+                                    feedId="14466f0d-201b-4b35-90ed-9be5ae6c9e25"
+                                /> */}
                                 <CuratorFeed />
                             </div>
                         </section>
@@ -81,6 +101,13 @@ export default function SocialMedia () {
                         <Grid container spacing={gridSpacing}>
                             {Array.isArray(item) && item.map((user, key) => (
                             <Grid item xs={12} md={4} key={key}>
+                                {/* <Iframe src={`https://www.youtube.com/embed/${item[0]?.ytid}`}
+                                    frameborder='0'
+                                    width="100%"
+                                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                                    // allowfullscreen
+                                    title='video'
+                                /> */}
                                 <a
                                     className="mr-1 d-flex"
                                     href={`https://www.youtube.com/watch?v=${user?.ytid}`}
@@ -98,6 +125,18 @@ export default function SocialMedia () {
                                         display: 'block',
                                         }}
                                     />
+                                    {/* <YouTubeIcon
+                                        style={{
+                                        position: 'absolute',
+                                        top: '50%',
+                                        left: '50%',
+                                        transform: 'translate(-50%, -50%)',
+                                        color: 'white',
+                                        fontSize: '48px',
+                                        opacity: 0.8,
+                                        color: '#f03',
+                                        }}
+                                    /> */}
                                     </a>
                             </Grid>
                             ))}

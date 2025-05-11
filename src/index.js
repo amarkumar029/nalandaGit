@@ -9,6 +9,9 @@ import ShowTheContent from "views/page/ShowTheContent";
 import StudentServices from "views/page/StudentServices";
 import Media from "views/page/Media";
 import Gallery from "views/page/Gallery";
+import GalleryDetails from "components/section/GalleryDetails";
+import GalleryDetailsAll from "components/section/GalleryDetailsAll";
+
 import NoticeDetails from "components/section/NoticeDetails";
 import NoticeDetailsAll from "components/section/NoticeDetailsAll";
 import NoticeAll from "views/page/NoticeAll";
@@ -101,6 +104,16 @@ root.render(
         path="/photo-gallery"
         exact
         element={<Gallery page="resultPhotoGallery" banner="resultPhotoGallery" />}
+      />
+      <Route
+        path="/galleryDetails/:id"
+        exact
+        element={<GalleryDetails />}
+      />
+      <Route
+        path="/galleryDetailsAll/:id" 
+        exact
+        element={<GalleryDetailsAll />}
       />
       <Route
         path="/news-gallery"

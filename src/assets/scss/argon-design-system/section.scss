@@ -306,6 +306,10 @@
             white-space: nowrap;
             text-overflow: ellipsis;
         }
+        &:hover .ntitle{
+            white-space: inherit;
+            text-overflow: inherit;
+        }
     }
     .titlemanage{
         display: flex;

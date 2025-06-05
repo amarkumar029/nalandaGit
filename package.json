@@ -74,6 +74,7 @@
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "react-twitter-embed": "^4.0.4",
     "reactstrap": "8.4.1",
     "sass": "1.53.0",
     "slick-carousel": "^1.8.1"

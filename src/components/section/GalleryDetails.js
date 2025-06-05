@@ -80,10 +80,10 @@ export default function GalleryDetails () {
             <Grid sx={{ mt: 1 }} container spacing={gridSpacing}>
               {myArray ? (
                 <>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <img style={{ width: '100%' }} src={myArray[0]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <img style={{ width: '100%' }} src={myArray[1]} alt={user.title} />
                   </Grid>
                 </>
@@ -95,7 +95,7 @@ export default function GalleryDetails () {
             <Grid sx={{ mt: 1 }} container spacing={gridSpacing}>
               {myArray ? (
                 <>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <Box sx={{ overflow: 'hidden' }}>
                       <Box sx={{ position: 'relative', paddingBottom: '90%' }}>
                         <img
@@ -113,7 +113,7 @@ export default function GalleryDetails () {
                       </Box>
                     </Box>
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <Grid container spacing={gridSpacing}>
                       <Grid item xs={12} md={12}>
                         <img style={{ width: '100%' }} src={myArray[1]} alt={user.title} />
@@ -132,16 +132,16 @@ export default function GalleryDetails () {
             <Grid sx={{ mt: 1 }} container spacing={gridSpacing}>
               {myArray ? (
                 <>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <img style={{ width: '100%' }} src={myArray[0]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <img style={{ width: '100%' }} src={myArray[1]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <img style={{ width: '100%' }} src={myArray[2]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <img style={{ width: '100%' }} src={myArray[3]} alt={user.title} />
                   </Grid>
                 </>
@@ -153,19 +153,19 @@ export default function GalleryDetails () {
             <Grid sx={{ mt: 1 }} container spacing={gridSpacing}>
               {myArray ? (
                 <>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <img style={{ width: '100%' }} src={myArray[0]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <img style={{ width: '100%' }} src={myArray[1]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={4}>
+                  <Grid item xs={4} md={4}>
                     <img style={{ width: '100%' }} src={myArray[2]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={4}>
+                  <Grid item xs={4} md={4}>
                     <img style={{ width: '100%' }} src={myArray[3]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={4}>
+                  <Grid item xs={4} md={4}>
                     <img style={{ width: '100%' }} src={myArray[3]} alt={user.title} />
                   </Grid>
                 </>
@@ -177,20 +177,20 @@ export default function GalleryDetails () {
             <Grid sx={{ mt: 1 }} container spacing={gridSpacing}>
               {myArray ? (
                 <>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <img style={{ width: '100%' }} src={myArray[0]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={6}>
+                  <Grid item xs={6} md={6}>
                     <img style={{ width: '100%' }} src={myArray[1]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={4}>
+                  <Grid item xs={4} md={4}>
                     <img style={{ width: '100%' }} src={myArray[2]} alt={user.title} />
                   </Grid>
-                  <Grid item xs={12} md={4}>
+                  <Grid item xs={4} md={4}>
                     <img style={{ width: '100%' }} src={myArray[3]} alt={user.title} />
                   </Grid>
                   {myArray ? (
-                    <Grid sx={{ position: 'relative' }} item xs={12} md={4}>
+                    <Grid sx={{ position: 'relative' }} item xs={4} md={4}>
                       <img src={myArray[4]} alt={user.title} />
                       <Box sx={fourPlus}>+{myArray.length -1 - 5}</Box>
                     </Grid>

@@ -71,7 +71,7 @@ function CardsFooter() {
                     &nbsp;
                   </h5>
                   <ul className="footermenu">
-                    <li><Link to="/gallery">Gallery</Link></li>
+                    <li><Link to="/media">Media</Link></li>
                     <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                     <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
                     <li><Link to="/rit">RTI</Link></li>

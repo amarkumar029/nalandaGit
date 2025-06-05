@@ -5,13 +5,13 @@ import { gridSpacing } from '../../store/constant';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 import Iframe from 'react-iframe'
 
 import axios from 'axios';
 import baseUrl from '../../navigation/base';
 import loadings from '../../assets/img/loader.gif';
-import CuratorFeed from './TwitterProfile';
-
+// import CuratorFeed from './TwitterProfile';
 
 export default function SocialMedia () {
     const [items, setItems] = useState([]);
@@ -67,7 +67,20 @@ export default function SocialMedia () {
                     <CardContent className="px-1">
                         <section className="twitterContainer">
                             <div className="twitter-embed">
-                                <CuratorFeed />
+                                {/* <CuratorFeed /> */}
+                                <TwitterTimelineEmbed
+                                sourceType="profile"
+                                screenName={items[0]?.twitter}
+                                options={{
+                                    tweetLimit: "10",
+                                    width: "100%",
+                                    height: "500"
+                                }}
+                                // theme="dark"
+                                noHeader="true"
+                                noBorders="true"
+                                noFooter="true"
+                                ></TwitterTimelineEmbed>
                             </div>
                         </section>
                     </CardContent>

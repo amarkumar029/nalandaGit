@@ -74,7 +74,7 @@ function CardsFooter() {
                     <li><Link to="/media">Media</Link></li>
                     <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                     <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
-                    <li><Link to="/rit">RTI</Link></li>
+                    {/* <li><Link to="/rit">RTI</Link></li> */}
                     <li><Link to="/uploads/Nalanda Open University Act.pdf" target="blank">NOU ACT</Link></li>
                     <li><Link to="https://swayam.gov.in/" target="blank">Swayam Portal</Link></li>
                     <li><Link to="https://nalandaopenuniversity.almaconnect.com/" target="blank">Alumni</Link></li>
